@@ -45,43 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/blas-base-diagonal-types
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-diagonalTypes = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-diagonal-types@umd/browser.js' )
-```
-The previous example will load the latest bundled code from the umd branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/blas-base-diagonal-types/tags). For example,
-
-```javascript
-diagonalTypes = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-diagonal-types@v0.0.0-umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var diagonalTypes = require( 'path/to/vendor/umd/blas-base-diagonal-types/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-diagonal-types@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.diagonalTypes;
-})();
-</script>
+var diagonalTypes = require( '@stdlib/blas-base-diagonal-types' );
 ```
 
 #### diagonalTypes()
@@ -118,13 +107,8 @@ The output array contains the following types:
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-assert-contains@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {.factory;
+```javascript
+var contains = require( '@stdlib/array-base-assert-contains' ).factory;
 var diagonalTypes = require( '@stdlib/blas-base-diagonal-types' );
 
 var isDiagonalType = contains( diagonalTypes() );
@@ -137,11 +121,6 @@ bool = isDiagonalType( 'unit' );
 
 bool = isDiagonalType( 'beep' );
 // returns false
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -150,7 +129,70 @@ bool = isDiagonalType( 'beep' );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/blas/base/diagonal_types.h"
+```
+
+#### STDLIB_BLAS_DIAGONAL_TYPE
+
+An enumeration of BLAS diagonal element types with the following fields:
+
+-   **STDLIB_BLAS_NON_UNIT_DIAGONAL**: elements along a diagonal are **not** all equal to one.
+-   **STDLIB_BLAS_UNIT_DIAGONAL**: elements along a diagonal are all equal to one.
+
+```c
+#include "stdlib/blas/base/diagonal_types.h"
+
+const enum STDLIB_BLAS_DIAGONAL_TYPE v = STDLIB_BLAS_UNIT_DIAGONAL;
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+### Notes
+
+-   Enumeration constants should be considered opaque values, and one should **not** rely on specific integer values.
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
