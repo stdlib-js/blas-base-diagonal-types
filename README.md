@@ -52,13 +52,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import diagonalTypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-diagonal-types@deno/mod.js';
+import diagonalTypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-diagonal-types@v0.0.1-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { enum } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-diagonal-types@deno/mod.js';
+import { enum } from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-diagonal-types@v0.0.1-deno/mod.js';
 ```
 
 #### diagonalTypes()
@@ -97,7 +97,7 @@ The output array contains the following types:
 
 ```javascript
 var contains = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-assert-contains' ).factory;
-import diagonalTypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-diagonal-types@deno/mod.js';
+import diagonalTypes from 'https://cdn.jsdelivr.net/gh/stdlib-js/blas-base-diagonal-types@v0.0.1-deno/mod.js';
 
 var isDiagonalType = contains( diagonalTypes() );
 
